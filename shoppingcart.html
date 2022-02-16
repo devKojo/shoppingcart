@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./shoppingcart.css">
+        <link rel="stylesheet" href="./custom popup/popup.css">
+        <script src="./shoppingcart.js"></script>
+        <script src="./custom popup/pop.js"></script>
+        <script src="./discountCode.js"></script>
+    </head>
+    <body onload="pricetag(),total(), total2(), total3(),items(),subtotal(),totalamt()">
+        
+        <div style="width:100%";>
+
+            <div style="display:inline-block; width:5%;" id="c1"></div>
+
+             <div style="display:inline-block; width:55%;" id="c1">
+                <div style="height:120px; width:100%;" id="cart-inner">
+                    <table>
+                        <tr>
+                            <td id="shoppingcart-title">Shopping cart</td>
+                            <td id="item-title">Items</td>
+                        </tr>
+                    </table>
+
+                    <div style="display:inline-block; width:24%;" id="cart-box1">
+                        <table>
+                            <th>ITEM DETAILS</th>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr>
+                                <td>
+                                    <img width="100px" height="100px" src="./img/preview.png">
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li><strong>Website template</strong></li>
+                                        <li>Business/agency/<br>commercial</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                             <tr><td>&nbsp;</td></tr>
+                               <tr>
+                                <td>
+                                    <img width="100px" height="100px" src="./img/a1dd9329c8fa044b2a14eb0815909a71.png">
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li><strong>Responsive-mobile template</strong></li>
+                                        <li>Professional/personal/<br>agency/commercial</li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+
+                               <tr><td>&nbsp;</td></tr>
+                               <tr>
+                                <td>
+                                    <img width="100px" height="100px" src="./img/👨🏻_💼-🔍-large.png">
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li><strong>Startup Website template</strong></li>
+                                        <li>Business startup</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div style="display:inline-block; width:10%;" id="cart-box2">
+                    <table>
+                           <thead><th>QUANTITY</th></thead>
+                          <tbody>
+                               <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr>
+                              <td><button id="minus" onclick="decreaseitem1(),calctotal(), items(), subtotal(), totalamt()">-</button> <input type="text" id="qty-bar" value="1"></td>
+                              <td><button id="plus" onclick="increaseitem1(),calctotal(), items(), subtotal(), totalamt()">+</button></td>
+                              </tr>
+
+                                 <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr>
+                              <td><button id="minus" onclick="decreaseitem2(), calctotal2(), items(), subtotal(), totalamt()">-</button> <input type="text" id="qty-bar-2" value="1"></td>
+                              <td><button id="plus" onclick="increaseitem2(), calctotal2(), items(), subtotal(), totalamt()">+</button></td>
+                              </tr>
+
+
+                               <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr>
+                              <td><button id="minus" onclick="decreaseitem3(), calctotal3(), items(), subtotal(), totalamt()">-</button> <input type="text" id="qty-bar-3" value="1"></td>
+                              <td><button id="plus" onclick="increaseitem3(), calctotal3(), items(), subtotal(), totalamt()">+</button></td>
+                              </tr>
+                          </tbody>
+                           
+                        </table>
+                    </div>
+
+                     <div style="display:inline-block; width:10%;" id="cart-box3">
+                        <table>
+                            <th>PRICE</th>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><input type="number" id="price" class="number-bar" value="250"></td></tr>
+
+                             <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><input type="number" id="price-2" class="number-bar" value="450"></td></tr>
+
+
+                             <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><input type="number" id="price-3" class="number-bar" value="670"></td></tr>
+                        </table>
+                    </div>
+
+                      <div style="display:inline-block; width:10%;" id="cart-box4">
+                        <table>
+                            <th>TOTAL</th>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><input type="number" id="total" class="number-bar"></td></tr>
+
+
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><input type="number" id="total-2" class="number-bar"></td></tr>
+
+
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><input type="number" id="total-3" class="number-bar"></td></tr>
+                        </table>
+                    </div>
+               
+
+                    
+
+                </div>
+               
+            </div>
+                 <div style="display:inline-block; width:5%;" id="c1"></div>
+              <div style="display:inline-block; width:30%;" id="c1" class="order-summary">
+             <div style="height:120px; width:100%;" id="cart-inner">
+                 <table>
+                        <tr>
+                            <td id="shoppingcart-title">Order Summary</td>
+                        </tr>
+                    </table>
+            </div>
+            <table>
+                <tr><td>&nbsp;</td></tr> 
+                <tr>
+                    <td>N/ITEMS</td>
+                    <td class="box-right"><input type="number" class="number-bar" id="items"></td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>SHIPPING</td>
+                     <td id="subtotal-label">SUB-TOTAL:</td>
+                     <td class="box-right"><input type="number" class="number-bar" id="subtotal"></td>
+                </tr>
+                 <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+                        <select id="selection">
+                            <!-- <option>Shipping Cost($)</option> -->
+                            <option value="50">Standard Delivery($) - 50</option>
+                            <option value="100">Premium Delivery($) - 100</option>
+                            <option value="250">Express Delivery($) - 250</option>
+                        </select>
+                    </td>
+                </tr>
+                 <tr><td>&nbsp;</td></tr>
+                <tr>
+                     <td>DISCOUNT CODE</td>
+                     <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                       <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                       <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                     <td>DISCOUNT</td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td><input type="text" id="input-label"></td>
+                    
+                     <td class="box-right">
+                        <input type="number" id="discount" class="number-bar" onchange="totalamt()">
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                   <td><button id="applyBtn" onclick="discountcode(), totalamt()">APPLY</button></td>
+                </tr>
+                 <tr><td>&nbsp;</td></tr>
+                  <tr><td>&nbsp;</td></tr>
+                 <tr>
+                    <td><strong>TOTAL COST $(USD)</strong></td>
+                    <td class="box-right"><input type="number" class="number-bar" id="totalamt"></td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                   <td><button id="checkoutBtn">CHECKOUT</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="width:100%;">
+            <div style="display: inline-block; width:10%;"></div>
+            <div style="display: inline-block; width:30%;" ><p>&nbsp;</p></div>
+           <div style="display: inline-block; width:20%;"></div>
+           <div style="display: inline-block; width:30%;"></div>
+        </div>
+
+           <div style="width:100%;" id="footer">
+            <div style="display: inline-block; width:20%;"></div>
+            <div style="display: inline-block; width:40%;" >
+                <h4><strong>Special Offers:</strong>&nbsp; Shopping Discount Code <button id="couponBtn" onclick="openBtn()">Generate</button></h4></div>
+           <div style="display:inline-block; width:20%;"></div>
+        </div>
+        <div style="width:100%;" id="footer2">
+        </div>
+
+
+        <div id="pop-cover" onclick="closeBtn()">
+
+        </div>
+
+        <div id="popup-box">
+            <div style="display: inline-block; width:100%;"> 
+              <div style="width:805; margin: 28px;">
+                    <form action="#">
+                        <table>
+                        <div style="width:100%;">
+                            <h1>Congratulations!</h1>
+                            <p>Discount code generated successfully</p>
+                        </div>
+
+                        <tr>
+                       <td> <label>Coupon no.</label></td>
+                       <td><input type="text" id="cc" value="ETSHYSJ12n80P"></td>
+                       <td><button onclick="copytextitem2()">Copy</button></td>
+                        </tr>
+
+                        <p>&nbsp;</p>
+                        <tr>
+                       <td><label>Discount Code</label></td>
+                       <td><input type="text" id="dc" value="ETS-21-GU-14"></td>
+                        <td><button onclick="copytextitem()">Copy</button></td>
+                            </tr>
+
+                        <div style="width:100%;">
+                            <h4>Enjoy your shopping experience</h4>
+                            <p>Don't forget to come back and keep shopping with us.</p>
+                        </div>
+                        </table>
+                    </form>
+              </div>
+               <div id="pop-footer"> <button onclick="closeBtn()">Close</button></div>
+            </div>
+        </div>
+    </body>
+</html>

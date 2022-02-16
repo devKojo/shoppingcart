@@ -1,0 +1,64 @@
+@font-face {
+    font-family:nunito;
+    src: url(./font/NunitoSans-Regular.ttf);
+}
+#popup-box {
+    width:450px;
+    height: 450px;
+    position: absolute;
+    left:33%;
+    right:0;
+    top:17%;
+    bottom:0;
+    background-color:white;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    border-radius:8px;
+    visibility: hidden;
+    font-family:nunito;
+    font-size: 13px;
+    z-index:2;
+}
+#popup-box th{
+    font-size: 20px;
+}
+
+
+#pop-footer{
+    width:100%;
+    height: 90px;
+    background-color: rgb(228, 228, 228);
+    position: absolute;
+    top:80%;
+    border-radius:8px;
+}
+
+#pop-footer button{
+
+    margin:5%;
+   position: absolute;
+   left: 30%;
+   background-color: crimson;
+   border:unset;
+   outline: unset;
+   color:white;
+   width:120px;
+   height:40px;
+   box-shadow: 2px 2px 2px #ccc;
+    border-radius:8px;
+    cursor: pointer;
+}
+
+#pop-cover{
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top:0;
+    bottom:0;
+    background-color: tomato;
+    background-image: url(../img/pop-bg.jpeg);
+    background-blend-mode: darken;
+    visibility: hidden;
+    z-index:1;
+    opacity:80%;
+    filter:blur(12px);
+}
